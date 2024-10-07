@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleslogin.css') }}">
+</head>
+<body>
+    <header class="login-logo">
+        <img src="{{ url_for('static', filename='img/logofilmoteca.png') }}" alt="Logo FilmoTeca">
+    </header>
+    <section class="login-box">
+        <form method="post"> <!-- Adicionei o formulário aqui -->
+            <div>
+                <h1 class="login-titulo">Entrar</h1>
+
+                <!-- Campo de Usuário -->
+                <div class="login-input-usuario">
+                    <span class="input-usuario">Usuário</span>
+                    <input type="text" id="username" name="username" class="input-text" required>
+                </div>
+
+                <!-- Campo de Senha -->
+                <div class="login-input-senha">
+                    <span class="input-senha">Senha</span>
+                    <input type="password" id="password" name="password" class="input-text" required>
+                </div>
+
+                <!-- Botão Entrar -->
+                <div>
+                    <button type="submit" class="login-button">
+                        <span class="login-button-text">Entrar</span>
+                    </button>
+                </div>
+
+                <div class="login-ou">
+                    <span class="login-ou-text">OU</span>
+                </div>
+
+                <!-- Botão inscreva-se -->
+                <div>
+                    <a href="{{ url_for('register') }}" class="login-signup">
+                        <span class="login-signup-text">Se for novo por aqui, Assine agora.</span>
+                    </a>
+                </div>
+
+                <div class="login-esqueceu-senha">
+                    <a href="{{ url_for('forgot_password') }}" class="login-esqueceu-senha-text">Esqueceu a senha?</a>
+                </div>
+
+                <!-- Lembrar de mim -->
+                <label class="login-relembrar">
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <span class="login-remember-usuario">Lembrar de mim</span>
+                </label>
+            </div>
+        </form> <!-- Fechamento do formulário -->
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </section>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

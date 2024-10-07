@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #3c3c3c;
+  background-image: url('static/img/pagina-cadastro.png');
+  font-family: "Inter", sans-serif;
+}
+
+.login-cadastro {
+  display: flex;
+  position: fixed;
+  top: 2.5rem;
+  margin-right: 63.5rem;
+  width: 7.31rem;
+  height: 2.5rem;
+}
+
+.box-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.5rem;
+  width: 19.4rem;
+  height: 24.8rem;
+  border-radius: 0.18rem;
+  background-color: #3c3c3c;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.cadastro-titulo {
+  display: flex;
+  height: 1.62rem;
+  color: #ffffff;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.input-nome,
+.input-email,
+.input-senha,
+.input-confirmar-senha {
+  position: absolute;
+  white-space: nowrap;
+  width: 3.18rem;
+  height: 0.625rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.71rem;
+  line-height: 0.61rem;
+  margin-top: 0.31rem;
+  margin-left: 0.62rem;
+}
+
+.input-text {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(204, 204, 204, 0.29);
+  border: none;
+  width: 13.87rem;
+  height: 2.43rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.125rem;
+  font-size: 0.65rem;
+  padding-left: 0.62rem;
+  padding-top: 0.5rem;
+  outline: none;
+}
+
+.botao-cadastrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.87rem;
+  height: 1.85rem;
+  border-radius: 0.31rem;
+  background-color: #f90306;
+  border: none;
+  cursor: pointer;
+}
+
+.cadastar-button-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 0.78rem;
+  letter-spacing: 0.031rem;
+  color: #ffffff;
+}
+
+.fazer-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fazer-login-text {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 0.78rem;
+  margin-top: 0.8rem;
+  white-space: nowrap;
+}
+
+.fazer-login-text:hover {
+  color: #02000d;
+}

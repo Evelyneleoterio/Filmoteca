@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmoTeca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo_filmoteca.jpg') }}" />
+</head>
+<body>
+    <header class="cabecalho">
+      <div class="cabecalho__logo">
+        <img src="{{ url_for('static', filename='img/logoFilmo.png') }}" alt="Logo Filmo Teca" />
+      </div>
+      <nav class="cabecalho__botoes">
+        <a class="cabecalho__botoes1" href="{{ url_for('login') }}">Login</a>
+        <a class="cabecalho__botoes1" href="{{ url_for('register') }}">Cadastro</a>
+      </nav>
+    </header>
+
+    <main class="banner-principal">
+      <section class="banner-principal__imagem">
+        <img src="{{ url_for('static', filename='img/topgun.png') }}" alt="Capa do filme TopGun" />
+      </section>
+
+      <section class="banner-principal-setas">
+        <button class="banner-botao-seta">
+          <img src="{{ url_for('static', filename='img/seta-esquerda.png') }}" alt="Seta para esquerda" />
+        </button>
+        <button class="banner-botao-seta">
+          <img src="{{ url_for('static', filename='img/seta-direita.png') }}" alt="Seta para direita" />
+        </button>
+      </section>
+
+      <section class="banner-principal__textos">
+        <h1>TOP <strong>GUN</strong></h1>
+        <p>
+          Pete Mitchell, conhecido como Maverick (Tom Cruise), é um jovem e
+          promissor piloto de caça que, ao lado de seu grande amigo Nick “Goose”
+          Bradshaw (Anthony Edwards), ingressa na Academia Aérea
+          norte-americana, especializada em desenvolver os melhores pilotos da
+          conhecida equipe Top Gun.
+        </p>
+        <div class="banner-principal-botoes-numericos">
+          <button class="banner-principal-botoes numero1">1</button>
+          <button class="banner-principal-botoes numero2">2</button>
+          <button class="banner-principal-botoes numero3">3</button>
+        </div>
+      </section>
+    <footer id="rodape">
+      <p>CENTRO UNIVERSITÁRIO LEONARDO DA VINCI - UNIASSELVI</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --cor--branca: #ffffff;
+  --cor-cinza-clara: rgba(204, 204, 204, 0.29);
+  --cor-cinza-escuro: #3c3c3c;
+  --cor-laranja: #f90306;
+
+  --fonte-principal: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #3c3c3c;
+  background-image: url(assetslogin/imagem-pagina.png);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.login-logo {
+  display: flex;
+  position: fixed;
+  top: 2.5rem;
+  margin-right: 63.5rem;
+  width: 7.31rem;
+  height: 2.5rem;
+}
+
+.login-imagem-center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 9.37rem;
+  width: 22rem;
+  height: 26rem;
+  border-radius: 0.18rem;
+  background-color: var(--cor-cinza-escuro);
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.login-titulo {
+  display: flex;
+  width: 4.2rem;
+  height: 1.62rem;
+  color: var(--cor--branca);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: var(--fonte-principal);
+}
+
+.login-input-usuario {
+  position: relative;
+}
+
+.input-usuario,
+.input-senha {
+  position: absolute;
+  white-space: nowrap;
+  width: 3.18rem;
+  height: 0.625rem;
+  color: var(--cor--branca);
+  font-weight: 400;
+  font-size: 0.6rem;
+  line-height: 0.61rem;
+  margin-top: 0.5rem;
+  margin-left: 0.62rem;
+  font-family: var(--fonte-principal);
+}
+
+.input-text {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: var(--cor-cinza-clara);
+  border: none;
+  width: 16rem;
+  height: 3rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.125rem;
+  font-size: 0.65rem;
+  padding-left: 0.62rem;
+  padding-top: 0.6rem;
+  outline: none;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 2rem;
+  border-radius: 0.31rem;
+  background-color: var(--cor-laranja);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-button-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 0.78rem;
+  letter-spacing: 0.031rem;
+  color: var(--cor--branca);
+  font-family: var(--fonte-principal);
+}
+
+.login-ou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.login-ou-text {
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.74rem;
+  color: var(--cor--branca);
+  text-align: center;
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border-radius: 0.31rem;
+  background-color: var(--cor-cinza-clara);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.login-signup-text {
+  font-family: var(--fonte-principal);
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 0.78rem;
+  color: var(--cor--branca);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-esqueceu-senha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-esqueceu-senha-text {
+  text-decoration: none;
+  color: var(--cor--branca);
+  display: flex;
+  width: 5.93rem;
+  height: 0.81rem;
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.78rem;
+  margin-top: 0.75rem;
+  white-space: nowrap;
+}
+
+.login-relembrar {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.login-remember-usuario {
+  width: 5rem;
+  height: 0.81rem;
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.78rem;
+  white-space: nowrap;
+  color: var(--cor--branca);
+}
