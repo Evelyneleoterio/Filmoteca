@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.tela-cadastro {
   display: flex;
   justify-content: center;
   background-color: #3c3c3c;
-  background-image: url('static/img/pagina-cadastro.png');
-  font-family: "Inter", sans-serif;
+  background-image: url(img/pagina-cadastro.png);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .login-cadastro {
@@ -22,13 +20,20 @@ body {
   height: 2.5rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .box-cadastro {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10.5rem;
-  width: 19.4rem;
-  height: 24.8rem;
+  margin: 9.37rem;
+  width: 22rem;
+  height: 26rem;
   border-radius: 0.18rem;
   background-color: #3c3c3c;
   box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -36,13 +41,24 @@ body {
 
 .cadastro-titulo {
   display: flex;
+  justify-content: flex-start;
+  width: 4.2rem;
   height: 1.62rem;
+  font-size: 2rem;
   color: #ffffff;
+  margin-left: -10rem;
   margin-top: -1rem;
   margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.login-input-usuario {
+  position: relative;
 }
 
 .input-nome,
+.input-username,
 .input-email,
 .input-senha,
 .input-confirmar-senha {
@@ -56,6 +72,7 @@ body {
   line-height: 0.61rem;
   margin-top: 0.31rem;
   margin-left: 0.62rem;
+  font-family: "Inter", sans-serif;
 }
 
 .input-text {
@@ -73,7 +90,10 @@ body {
   padding-top: 0.5rem;
   outline: none;
 }
-
+.input-text:focus {
+  outline: none;
+  background-color: rgba(204, 204, 204, 0.5);
+}
 .botao-cadastrar {
   display: flex;
   justify-content: center;
@@ -92,6 +112,7 @@ body {
   line-height: 0.78rem;
   letter-spacing: 0.031rem;
   color: #ffffff;
+  font-family: "Inter", sans-serif;
 }
 
 .fazer-login {
@@ -109,6 +130,7 @@ body {
   line-height: 0.78rem;
   margin-top: 0.8rem;
   white-space: nowrap;
+  font-family: "Inter", sans-serif;
 }
 
 .fazer-login-text:hover {
