@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FilmoTeca</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo_filmoteca.jpg') }}" />
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/logo_filmoteca.jpg') }}"
+    />
+  </head>
+  <body>
     <header class="cabecalho">
       <div class="cabecalho__logo">
-        <img src="{{ url_for('static', filename='img/logoFilmo.png') }}" alt="Logo Filmo Teca" />
+        <img
+          src="{{ url_for('static', filename='img/logoFilmo.png') }}"
+          alt="Logo Filmo Teca"
+        />
       </div>
       <nav class="cabecalho__botoes">
-        <a class="cabecalho__botoes1" href="{{ url_for('settings') }}">Configurações</a> <!-- Botão de Configurações -->
-        <a class="cabecalho__botoes1" href="{{ url_for('logout') }}">Logout</a> <!-- Botão de Logout -->
+        <a class="cabecalho__botoes1" href="{{ url_for('settings') }}"
+          >Configurações</a
+        >
+        <!-- Botão de Configurações -->
+        <a class="cabecalho__botoes1" href="{{ url_for('logout') }}">Logout</a>
+        <!-- Botão de Logout -->
       </nav>
     </header>
 
     <main class="banner-principal">
       <section class="banner-principal__imagem">
-        <img src="{{ url_for('static', filename='img/topgun.png') }}" alt="Capa do filme TopGun" />
+        <img
+          src="{{ url_for('static', filename='img/topgun.png') }}"
+          alt="Capa do filme TopGun"
+        />
       </section>
 
       <section class="banner-principal-setas">
         <button class="banner-botao-seta">
-          <img src="{{ url_for('static', filename='img/seta-esquerda.png') }}" alt="Seta para esquerda" />
+          <img
+            src="{{ url_for('static', filename='img/seta-esquerda.png') }}"
+            alt="Seta para esquerda"
+          />
         </button>
         <button class="banner-botao-seta">
-          <img src="{{ url_for('static', filename='img/seta-direita.png') }}" alt="Seta para direita" />
+          <img
+            src="{{ url_for('static', filename='img/seta-direita.png') }}"
+            alt="Seta para direita"
+          />
         </button>
       </section>
 
@@ -42,9 +65,9 @@
         <h1>TOP <strong>GUN</strong></h1>
         <p>
           Pete Mitchell, conhecido como Maverick (Tom Cruise), é um jovem e
-          promissor piloto de caça que, ao lado de seu grande amigo Nick “Goose” 
-          Bradshaw (Anthony Edwards), ingressa na Academia Aérea 
-          norte-americana, especializada em desenvolver os melhores pilotos da 
+          promissor piloto de caça que, ao lado de seu grande amigo Nick “Goose”
+          Bradshaw (Anthony Edwards), ingressa na Academia Aérea
+          norte-americana, especializada em desenvolver os melhores pilotos da
           conhecida equipe Top Gun.
         </p>
         <div class="banner-principal-botoes-numericos">
@@ -53,91 +76,103 @@
           <button class="banner-principal-botoes numero3">3</button>
         </div>
       </section>
+
+      <section class="banner-destaque__filmes">
+        <div class="banner-destaque-container">
+          <h2 class="destaque-filmes-mais_assistidos">Mais assistidos</h2>
+          <div class="destaque-filmes">
+            <div class="destaque filme-curtindo-a-vida-adoidado">
+              <img
+                src="{{ url_for('static', filename='img/curtindo-a-vida-adoidado.png') }}"
+                alt="Capa do filme Curtindo a Vida Adoidado"
+              />
+              <h3>CURTINDO A VIDA ADOIDADO</h3>
+              <p>
+                O adolescente Ferris Bueller decide sair da rotina e engana seus
+                pais fingindo estar doente para poder matar aula. Ele convence
+                sua namorada, Sloane, e seu melhor amigo, Cameron, a se juntar a
+                ele no passeio até Chicago, usando a Ferrari do pai de Cameron.
+                No entanto, o diretor da escola sabe que Ferris está mentindo e
+                vai atrás dele.
+              </p>
+            </div>
+            <div class="destaque filme-de-volta-para-o-futuro">
+              <img
+                src="{{ url_for('static', filename='img/de-volta-para-o-futuro.png') }}"
+                alt="Capa do filme De Volta Para o Futuro"
+              />
+              <h3>DE VOLTA PARA O FUTURO</h3>
+              <p>
+                O adolescente Marty McFly é transportado para 1955 quando uma
+                experiência do excêntrico cientista Doc Brown dá errado. Ele
+                viaja pelo tempo em um carro modificado e acaba conhecendo seus
+                pais ainda jovens. O problema é que Marty pode deixar de existir
+                porque ele interferiu na rotina dos pais, que correm o risco de
+                não se apaixonar mais.
+              </p>
+            </div>
+            <div class="destaque filme-robocop">
+              <img
+                src="{{ url_for('static', filename='img/robocop.png') }}"
+                alt="Capa do filme Robocop"
+              />
+              <h3>ROBOCOP</h3>
+              <p>
+                A corporação Omni Consumer Products estuda desenvolver o projeto
+                Delta City, que vai substituir a abandonada Detroit. Para
+                atingir esse fim, a OCP convoca as forças armadas para intimidar
+                os residentes de fora da cidade, sob o pretexto de que eles
+                estarão contribuindo para reduzir a criminalidade. Depois de
+                Robocop se unir à resistência civil, ele sustenta vários
+                ferimentos, mas se recupera para lutar contra os robôs-ninja
+                construídos pela OCP.
+              </p>
+            </div>
+            <div class="destaque filme-clube-dos-cinco">
+              <img
+                src="{{ url_for('static', filename='img/clube-dos-cinco.png') }}"
+                alt="Capa do filme Clube dos Cinco"
+              />
+              <h3>CLUBE DOS CINCO</h3>
+              <p>
+                Cinco adolescentes do ensino médio cometem pequenos delitos na
+                escola. Os estudantes são punidos e precisam passar o sábado na
+                biblioteca do colégio escrevendo uma redação contando o que
+                pensam de si mesmos. O grupo reúne jovens com perfis
+                completamente diferentes: o popular, a patricinha, a esquisita,
+                o nerd e o rebelde. No decorrer do dia, eles passam a se
+                conhecer melhor e a aceitar suas diferenças, compartilhando seus
+                maiores segredos.
+              </p>
+            </div>
           </div>
 
-          <section class="banner-destaque__filmes">
-            <div class="banner-destaque-container">
-              <h2 class="destaque-filmes-mais_assistidos">Mais assistidos</h2>
-              <div class="destaque-filmes">
-                <div class="destaque filme-curtindo-a-vida-adoidado">
-                  <img src="{{ url_for('static', filename='img/curtindo-a-vida-adoidado.png') }}" alt="Capa do filme Curtindo a Vida Adoidado" />
-                  <h3>CURTINDO A VIDA ADOIDADO</h3>
-                  <p>
-                    O adolescente Ferris Bueller decide sair da rotina e engana seus
-                    pais fingindo estar doente para poder matar aula. Ele convence
-                    sua namorada, Sloane, e seu melhor amigo, Cameron, a se juntar a
-                    ele no passeio até Chicago, usando a Ferrari do pai de Cameron.
-                    No entanto, o diretor da escola sabe que Ferris está mentindo e
-                    vai atrás dele.
-                  </p>
-                </div>
-                <div class="destaque filme-de-volta-para-o-futuro">
-                  <img src="{{ url_for('static', filename='img/de-volta-para-o-futuro.png') }}" alt="Capa do filme De Volta Para o Futuro" />
-                  <h3>DE VOLTA PARA O FUTURO</h3>
-                  <p>
-                    O adolescente Marty McFly é transportado para 1955 quando uma
-                    experiência do excêntrico cientista Doc Brown dá errado. Ele
-                    viaja pelo tempo em um carro modificado e acaba conhecendo seus
-                    pais ainda jovens. O problema é que Marty pode deixar de existir
-                    porque ele interferiu na rotina dos pais, que correm o risco de
-                    não se apaixonar mais.
-                  </p>
-                </div>
-                <div class="destaque filme-robocop">
-                  <img src="{{ url_for('static', filename='img/robocop.png') }}" alt="Capa do filme Robocop" />
-                  <h3>ROBOCOP</h3>
-                  <p>
-                    A corporação Omni Consumer Products estuda desenvolver o projeto
-                    Delta City, que vai substituir a abandonada Detroit. Para
-                    atingir esse fim, a OCP convoca as forças armadas para intimidar
-                    os residentes de fora da cidade, sob o pretexto de que eles
-                    estarão contribuindo para reduzir a criminalidade. Depois de
-                    Robocop se unir à resistência civil, ele sustenta vários
-                    ferimentos, mas se recupera para lutar contra os robôs-ninja
-                    construídos pela OCP.
-                  </p>
-                </div>
-                <div class="destaque filme-clube-dos-cinco">
-                  <img src="{{ url_for('static', filename='img/clube-dos-cinco.png') }}" alt="Capa do filme Clube dos Cinco" />
-                  <h3>CLUBE DOS CINCO</h3>
-                  <p>
-                    Cinco adolescentes do ensino médio cometem pequenos delitos na
-                    escola. Os estudantes são punidos e precisam passar o sábado na
-                    biblioteca do colégio escrevendo uma redação contando o que
-                    pensam de si mesmos. O grupo reúne jovens com perfis
-                    completamente diferentes: o popular, a patricinha, a esquisita,
-                    o nerd e o rebelde. No decorrer do dia, eles passam a se
-                    conhecer melhor e a aceitar suas diferenças, compartilhando seus
-                    maiores segredos.
-                  </p>
-                </div>
-              </div>
-    
-              <div class="filme-adicionar-itens">
-                <div class="filme-adicionar-item">
-                  <button class="filme-botao-adicionar">+</button>
-                  <p class="filme-adicionar">Adicionar na lista</p>
-                </div>
-                <div class="filme-adicionar-item">
-                  <button class="filme-botao-adicionar">+</button>
-                  <p class="filme-adicionar">Adicionar na lista</p>
-                </div>
-                <div class="filme-adicionar-item">
-                  <button class="filme-botao-adicionar">+</button>
-                  <p class="filme-adicionar">Adicionar na lista</p>
-                </div>
-                <div class="filme-adicionar-item">
-                  <button class="filme-botao-adicionar">+</button>
-                  <p class="filme-adicionar">Adicionar na lista</p>
-                </div>
-              </div>
+          <div class="filme-adicionar-itens">
+            <div class="filme-adicionar-item">
+              <button class="filme-botao-adicionar">+</button>
+              <p class="filme-adicionar">Adicionar na lista</p>
             </div>
-          </section>
+            <div class="filme-adicionar-item">
+              <button class="filme-botao-adicionar">+</button>
+              <p class="filme-adicionar">Adicionar na lista</p>
+            </div>
+            <div class="filme-adicionar-item">
+              <button class="filme-botao-adicionar">+</button>
+              <p class="filme-adicionar">Adicionar na lista</p>
+            </div>
+            <div class="filme-adicionar-item">
+              <button class="filme-botao-adicionar">+</button>
+              <p class="filme-adicionar">Adicionar na lista</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="banner-terceira-sessao-imagem">
-        <img src="{{ url_for('static', filename='img/ghost.png') }}" alt="Capa do filme Ghost" />
+        <img
+          src="{{ url_for('static', filename='img/ghost.png') }}"
+          alt="Capa do filme Ghost"
+        />
         <section class="terceiro-banner-textos">
           <h1 class="letra-ghost">Ghost</h1>
           <h2 class="texto2">Do outro lado da vida</h2>
@@ -148,14 +183,14 @@
             pede ajuda a uma médium que consegue ouvi-lo.
           </p>
           <button class="botao-alugar">Alugar</button>
-          <button class="botao-sinopse-completa">Sinopse completa</button>
+          <!-- <button class="botao-sinopse-completa">Sinopse completa</button> -->
         </section>
       </section>
 
       <section id="banner-quarta-sessao">
         <img
           class="logotipo-filmoteca4"
-          src="static\img\Filmotecabranco.png"
+          src="{{ url_for('static', filename='img/Filmotecabranco.png') }}"
           alt=""
         />
         <p class="text-project">
@@ -180,5 +215,5 @@
     <footer id="rodape">
       <p>CENTRO UNIVERSITÁRIO LEONARDO DA VINCI - UNIASSELVI</p>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove preenchimento */
+}
+
+.navegacao {
+  background-color: #343a40; /* Cor de fundo do header */
+  padding: 10px; /* Espaçamento interno */
+}
+
+.navegacao a {
+  color: #ffffff; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  margin-right: 20px; /* Espaçamento entre links */
+}
+
+.navegacao a:hover {
+  color: #ffc107; /* Cor do texto ao passar o mouse */
+}
+
+.container {
+  padding: 20px; /* Espaçamento interno da container */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espaçamento entre os grupos de formulário */
+}
+
+input {
+  padding: 10px; /* Preenchimento interno dos campos */
+  width: 100%; /* Largura total dos campos */
+  border: 1px solid #ccc; /* Borda padrão */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+.btn {
+  padding: 10px 15px; /* Estilo dos botões */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  color: #ffffff; /* Cor do texto do botão */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Cor do botão Salvar */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Cor do botão Deletar */
+}
+
+.btn:hover {
+  opacity: 0.8; /* Efeito de hover */
+}
