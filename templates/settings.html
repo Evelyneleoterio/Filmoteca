@@ -6,84 +6,86 @@
     <title>Configurações</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="{{ url_for('static', filename='settings.css') }}"
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Filmoteca</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <a
-            class="btn btn-outline-danger my-2 my-sm-0"
-            href="{{ url_for('logout') }}"
-            >Logout</a
-          >
-        </form>
+    <header class="nav-botoes">
+      <img
+        class="logo-filmoteca"
+        src="{{ url_for('static', filename='img/logofilmoteca.png') }}"
+        alt=""
+      />
+      <ul class="menu-botoes">
+        <li>
+          <a href="#" class="botao-menu">Menu</a>
+          <ul class="menu-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div class="conteudo-configuracao">
+        <div class="box-configuracao">
+          <div class="configuracao">
+            <h1 class="text-config">Configurações</h1>
+            <form method="POST" action="/settings">
+              <div class="config-informacao">
+                <div class="text-nome">
+                  <input
+                    type="text"
+                    class="camp-entrada"
+                    id="nome"
+                    name="nome"
+                    placeholder="Nome"
+                    required
+                  />
+                </div>
+                <div class="text-email">
+                  <input
+                    type="email"
+                    class="camp-entrada"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="text-senha">
+                  <input
+                    type="password"
+                    class="camp-entrada"
+                    id="senha"
+                    name="senha"
+                    placeholder="Senha"
+                    required
+                  />
+                </div>
+                <button type="submit" class="botao-salvar">Salvar</button>
+              </div>
+            </form>
+
+            <!-- Formulário separado para deletar conta -->
+            <form method="POST" action="/settings" style="margin-top: 20px">
+              <input type="hidden" name="delete_account" value="true" />
+              <button
+                type="submit"
+                class="botao-excluir"
+                onclick="return confirm('Tem certeza que deseja deletar sua conta?');"
+              >
+                Deletar Conta
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    </nav>
 
-    <div class="container mt-4">
-      <h1>Configurações</h1>
-
-      <!-- Formulário para atualizar informações -->
-      <form method="POST" action="/settings">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nome"
-            name="nome"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="senha">Senha</label>
-          <input
-            type="password"
-            class="form-control"
-            id="senha"
-            name="senha"
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </form>
-
-      <!-- Formulário separado para deletar conta -->
-      <form method="POST" action="/settings" style="margin-top: 20px">
-        <input type="hidden" name="delete_account" value="true" />
-        <button
-          type="submit"
-          class="btn btn-danger"
-          onclick="return confirm('Tem certeza que deseja deletar sua conta?');"
-        >
-          Deletar Conta
-        </button>
-      </form>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </main>
   </body>
 </html>
