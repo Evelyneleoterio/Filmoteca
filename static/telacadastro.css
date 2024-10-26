@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url(global.css);
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.tela-cadastro {
   display: flex;
   justify-content: center;
-  background-color: #3c3c3c;
-  background-image: url('static/img/pagina-cadastro.png');
-  font-family: "Inter", sans-serif;
+  background-color: var(--cor-cinza-escuro);
+  background-image: url(img/pagina-cadastro.png);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .login-cadastro {
@@ -22,27 +20,45 @@ body {
   height: 2.5rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .box-cadastro {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10.5rem;
-  width: 19.4rem;
-  height: 24.8rem;
+  margin: 9.37rem;
+  width: 22rem;
+  height: 26rem;
   border-radius: 0.18rem;
-  background-color: #3c3c3c;
-  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  background-color: var(--cor-cinza-escuro);
+  box-shadow: var(--cor--box-shadow);
 }
 
 .cadastro-titulo {
   display: flex;
+  justify-content: flex-start;
+  width: 4.2rem;
   height: 1.62rem;
-  color: #ffffff;
+  font-size: 2rem;
+  color: var(--cor--branca);
+  margin-left: -10rem;
   margin-top: -1rem;
   margin-bottom: 2rem;
+  font-family: var(--fonte--principal);
+  font-weight: 600;
+}
+
+.login-input-usuario {
+  position: relative;
 }
 
 .input-nome,
+.input-username,
 .input-email,
 .input-senha,
 .input-confirmar-senha {
@@ -50,19 +66,20 @@ body {
   white-space: nowrap;
   width: 3.18rem;
   height: 0.625rem;
-  color: #ffffff;
+  color: var(--cor--branca);
   font-weight: 400;
   font-size: 0.71rem;
   line-height: 0.61rem;
   margin-top: 0.31rem;
   margin-left: 0.62rem;
+  font-family: var(--fonte--principal);
 }
 
 .input-text {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  background-color: rgba(204, 204, 204, 0.29);
+  background-color: var(--cor-cinza-clara);
   border: none;
   width: 13.87rem;
   height: 2.43rem;
@@ -73,7 +90,10 @@ body {
   padding-top: 0.5rem;
   outline: none;
 }
-
+.input-text:focus {
+  outline: none;
+  background-color: rgba(204, 204, 204, 0.5);
+}
 .botao-cadastrar {
   display: flex;
   justify-content: center;
@@ -81,7 +101,7 @@ body {
   width: 13.87rem;
   height: 1.85rem;
   border-radius: 0.31rem;
-  background-color: #f90306;
+  background-color: var(--cor-laranja);
   border: none;
   cursor: pointer;
 }
@@ -91,7 +111,8 @@ body {
   font-weight: 600;
   line-height: 0.78rem;
   letter-spacing: 0.031rem;
-  color: #ffffff;
+  color: var(--cor--branca);
+  font-family: var(--fonte--principal);
 }
 
 .fazer-login {
@@ -102,9 +123,9 @@ body {
 
 .fazer-login-text {
   text-decoration: none;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+  color: var(--cor--branca);
+  font-family: var(--fonte--principal);
+  font-weight: 600;
   font-size: 0.7rem;
   line-height: 0.78rem;
   margin-top: 0.8rem;

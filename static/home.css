@@ -1,0 +1,9 @@
+.banner-principal__imagem {
+  height: 100vh;
+}
+.banner-botao-seta,
+.banner-principal-setas,
+.banner-principal__textos,
+.banner-principal-botoes-numericos {
+  display: none;
+}
