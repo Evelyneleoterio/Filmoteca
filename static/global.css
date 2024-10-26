@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --cor--branca: #ffffff;
+  --cor-cinza-clara: rgba(204, 204, 204, 0.29);
+  --cor-cinza-escuro: #3c3c3c;
+  --cor-laranja: #f90306;
+  --cor--fundo--banner--filmes: #292929;
+  --cor--fundo--filmes-mais-assitidos: #201d1d;
+  --cor--box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+
+  --fonte--principal: "Inter", sans-serif;
+}
