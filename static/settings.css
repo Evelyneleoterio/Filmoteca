@@ -24,12 +24,16 @@ body {
 }
 
 .logo-filmoteca {
-  margin-right: 60rem;
+  margin-left: 10rem;
+  display: flex;
+  margin-right: 50rem;
 }
 .nav-botoes {
   display: flex;
   justify-content: flex-end;
-  padding: 40px;
+  margin-right: 20px;
+  margin-top: 2rem;
+  position: fixed;
 }
 
 .menu-botoes {
@@ -57,7 +61,6 @@ body {
   font-size: 1rem;
   color: var(--cor--branca);
   font-weight: 600;
-  margin-right: 10rem;
 }
 
 .menu-links {
