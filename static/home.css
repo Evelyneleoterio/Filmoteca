@@ -1,9 +1,69 @@
-.banner-principal__imagem {
+@import url(global.css);
+
+.image-principal {
+  position: relative;
+  background-image: url(img/fundo.jpeg);
+  background-repeat: no-repeat;
   height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
-.banner-botao-seta,
-.banner-principal-setas,
-.banner-principal__textos,
-.banner-principal-botoes-numericos {
-  display: none;
+
+.image-principal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(60, 60, 60, 0.5);
+  z-index: 1;
+}
+
+.image-principal > * {
+  position: relative;
+  z-index: 2;
+}
+
+.texs-principal {
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  transform: translate(-50%, -50%);
+  color: var(--cor--branca);
+  font-family: var(--fonte--principal);
+}
+
+.tex-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+strong {
+  margin-top: 0.5rem;
+  font-size: 4rem;
+  color: var(--cor-laranja);
+  letter-spacing: -0.1rem;
+}
+
+.tex-filmoteca {
+  font-family: var(--fonte--principal);
+  font-weight: 700;
+}
+
+.tex-descricao {
+  width: 35rem;
+  height: 2.23rem;
+  font-size: 1.2rem;
+  font-weight: 25rem;
+  line-height: 1.2;
+  letter-spacing: -0.00375rem;
+  color: var(--cor--branca);
+  font-family: var(--fonte--principal);
+  word-wrap: break-word;
+  margin-left: 12rem;
 }
