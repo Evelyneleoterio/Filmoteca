@@ -67,7 +67,7 @@ python app.py run
 
 # Pessoas incríveis por trás deste projeto:
 
-#### Criadores:
+#### Criadores 👨‍💻 👩‍💻:
 
 - Evelyn Eleoterio (Front-End e Tech Lead) [![Linkedin](https://i.sstatic.net/gVE0j.png) ](https://www.linkedin.com/in/evelyn-eleoterio/) [![GitHub](https://i.sstatic.net/tskMh.png) ](https://github.com/Evelyneleoterio)
 
@@ -82,6 +82,6 @@ python app.py run
 
 - Karen Souza (Documentação do Projeto) [![Linkedin](https://i.sstatic.net/gVE0j.png) ](https://www.linkedin.com/in/kar-nv/) [![GitHub](https://i.sstatic.net/tskMh.png) ](https://github.com/Kar-nV)
 
-#### Orientador do projeto:
+#### Orientador do projeto 👨‍🏫:
 
 - Emeson Borges [![Linkedin](https://i.sstatic.net/gVE0j.png) ](https://www.linkedin.com/in/emeson-borges-1539b3126/) [![GitHub](https://i.sstatic.net/tskMh.png) ](https://github.com/Emeson-Borges)
